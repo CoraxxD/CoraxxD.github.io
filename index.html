@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Очередь заказов</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #121212; color: white; overflow: hidden; position: relative; }
+        h1, h2 { text-align: center; color: #ffffff; }
+        .container { max-width: 700px; margin: auto; background: #1e1e1e; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); position: relative; z-index: 2; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #444; padding: 10px; text-align: center; }
+        th { background-color: #007bff; color: white; }
+        tr:nth-child(even) { background-color: #2a2a2a; }
+        a { color: #4da6ff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .snowflake { position: fixed; top: -10px; color: white; font-size: 12px; user-select: none; pointer-events: none; animation: fall linear infinite; z-index: 1; }
+        @keyframes fall {
+            to { transform: translateY(100vh); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Очередь заказов</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Ник</th>
+                    <th>Контакт</th>
+                    <th>Статус</th>
+                </tr>
+            </thead>
+            <tbody id="queue"></tbody>
+        </table>
+
+        <h2>История заказов</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Ник</th>
+                    <th>Контакт</th>
+                    <th>Статус</th>
+                </tr>
+            </thead>
+            <tbody id="history"></tbody>
+        </table>
+    </div>
+    
+    <script>
+        async function loadOrders() {
+            const response = await fetch('orders.json');
+            const data = await response.json();
+
+            const queueTable = document.getElementById('queue');
+            const historyTable = document.getElementById('history');
+            
+            queueTable.innerHTML = '';
+            historyTable.innerHTML = '';
+            
+            data.queue.forEach((order, index) => {
+                queueTable.innerHTML += `<tr>
+                    <td>${index + 1}</td>
+                    <td>${order.name}</td>
+                    <td><a href="${order.contact}" target="_blank">Ссылка</a></td>
+                    <td>${order.status}</td>
+                </tr>`;
+            });
+            
+            data.history.forEach((order, index) => {
+                historyTable.innerHTML += `<tr>
+                    <td>${index + 1}</td>
+                    <td>${order.name}</td>
+                    <td><a href="${order.contact}" target="_blank">Ссылка</a></td>
+                    <td>${order.status}</td>
+                </tr>`;
+            });
+        }
+        
+        function createSnowflakes() {
+            for (let i = 0; i < 10; i++) { // Уменьшено количество снежинок
+                let snowflake = document.createElement("div");
+                snowflake.innerHTML = "❄";
+                snowflake.classList.add("snowflake");
+                snowflake.style.left = Math.random() * 100 + "vw";
+                snowflake.style.animationDuration = (Math.random() * 3 + 2) + "s";
+                snowflake.style.fontSize = (Math.random() * 10 + 10) + "px";
+                document.body.appendChild(snowflake);
+                setTimeout(() => snowflake.remove(), 5000);
+            }
+        }
+        setInterval(createSnowflakes, 1000); // Увеличен интервал появления снежинок
+        
+        loadOrders();
+    </script>
+</body>
+</html>

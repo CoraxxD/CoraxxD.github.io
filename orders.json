@@ -1,0 +1,21 @@
+{
+    queue [
+        {
+            name Заказчик1,
+            contact httpst.meexample,
+            status В процессе
+        },
+        {
+            name Заказчик2,
+            contact httpsvk.comexample,
+            status Ожидание
+        }
+    ],
+    history [
+        {
+            name Заказчик3,
+            contact httpst.meexample,
+            status Готово
+        }
+    ]
+}
