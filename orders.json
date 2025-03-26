@@ -1,16 +1,16 @@
 {
-    queue [
+    "queue": [
         {
-            name amyoma,
-            contact t.me/amyomaa,
-            status В процессе
+            "name": "amyoma",
+            "contact": "t.me/amyomaa",
+            "status": "В процессе"
         }
     ],
-    history [
+    "history": [
         {
-            name iwyry,
-            contact t.me/iwydesu,
-            status Готово
+            "name": "iwyry",
+            "contact": "t.me/iwydesu",
+            "status": "Готово"
         }
     ]
 }
