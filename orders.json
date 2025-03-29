@@ -1,6 +1,9 @@
 {
     "queue": [
         {
+            "name": "-",
+            "contact": "-",
+            "status": "В ожидании заказов"
         }
     ],
     "history": [
