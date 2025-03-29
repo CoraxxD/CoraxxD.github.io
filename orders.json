@@ -1,15 +1,17 @@
 {
     "queue": [
         {
-            "name": "amyoma",
-            "contact": "https://t.me/amyomaa",
-            "status": "В процессе"
         }
     ],
     "history": [
         {
             "name": "iwyry",
             "contact": "https://t.me/iwydesu/2091",
+            "status": "Готово"
+        },
+        {   
+            "name": "amyoma",
+            "contact": "https://t.me/amyomaa",
             "status": "Готово"
         }
     ]
