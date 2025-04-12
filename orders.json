@@ -1,8 +1,8 @@
 {
     "queue": [
         {
-            "name": "amyoma",
-            "contact": "https://t.me/amyomaa",
+            "name": "listokaru",
+            "contact": "-",
             "status": "В работе"
         },
         {
@@ -12,6 +12,11 @@
         }
     ],
     "history": [
+        {
+            "name": "amyoma",
+            "contact": "https://t.me/amyomaa",
+            "status": "Готово"
+        },
         {
             "name": "iwyry",
             "contact": "https://t.me/iwydesu/2091",
