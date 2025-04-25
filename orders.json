@@ -1,11 +1,6 @@
 {
     "queue": [
         {
-            "name": "amyoma, xTeraMoon, miyuchiiro",
-            "contact": "-",
-            "status": "В работе"
-        },
-        {
             "name": "listokaru",
             "contact": "-",
             "status": "В очереди"
@@ -17,6 +12,11 @@
         }
     ],
     "history": [
+        {
+            "name": "amyoma, xTeraMoon, miyuchiiro",
+            "contact": "-",
+            "status": "Готово"
+        },
         {
             "name": "listokaru",
             "contact": "-",
