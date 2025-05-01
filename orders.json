@@ -4,14 +4,14 @@
             "name": "listokaru",
             "contact": "-",
             "status": "В работе"
-        },
-        {
-            "name": "listokaru",
-            "contact": "-",
-            "status": "В очереди"
         }
     ],
     "history": [
+        {
+            "name": "listokaru",
+            "contact": "-",
+            "status": "Готово"
+        },
         {
             "name": "amyoma, xTeraMoon, miyuchiiro",
             "contact": "-",
