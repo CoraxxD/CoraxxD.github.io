@@ -1,17 +1,17 @@
 {
     "queue": [
         {
-            "name": "listokaru",
-            "contact": "-",
-            "status": "В работе"
-        },
-        {
             "name": "Lina_mi_bunny",
             "contact": "-",
-            "status": "В очереди"
+            "status": "В работе"
         }
     ],
     "history": [
+        {
+            "name": "listokaru",
+            "contact": "-",
+            "status": "Готово"
+        },
         {
             "name": "listokaru",
             "contact": "-",
